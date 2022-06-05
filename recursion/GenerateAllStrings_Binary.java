@@ -6,8 +6,8 @@ public class GenerateAllStrings_Binary {
     
     public static int [] A;
     public static void main(String[] args) {
-        A = new int[4];
-        GenerateAllString(4, 0);
+        A = new int[3];
+        GenerateAllString(3, 0);
     }
 
     public static void GenerateAllString(int size, int index) {
