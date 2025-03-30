@@ -11,13 +11,14 @@ public class GenerateCombinations {
 
         if (op.length() == k) {
             System.out.println(op);
+            return;
         }
 
-        if (index >= str.length())
-            return;
-
         for (int i = index; i < str.length(); i++) {
-            solve(str, op + str.charAt(i), index + 1, k);
+
+            // String tmp = str.substring(0, i) + str.substring(i+1);
+            // solve(tmp, op + str.charAt(i), index + 1, k);
+            solve(str, op + str.charAt(i), i + 1, k);
         }
     }
 }
