@@ -7,7 +7,7 @@ public class GenerateAllPermutationGivenArray {
     static int [] perms;
     public static void main(String[] args) {
         
-        int [] A = new int [] {0, 1, 2, 3} ;
+        int [] A = new int [] {1, 2, 3} ;
         perms = A.clone();
         GenerateAllPerms(A, 0, A.length);
     }
