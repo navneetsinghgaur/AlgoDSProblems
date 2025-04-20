@@ -12,7 +12,7 @@ public class CombinationSum {
         list.add(7);
 
 
-        solve(list, "", 0, 9);
+        solveAux(list, "", 0, 9);
 
     }
 
@@ -31,5 +31,23 @@ public class CombinationSum {
 
             solve(list, op + list.get(i), i+1, sum-list.get(i));
         }
+    }
+
+    //Better One, Either take this or don't take this
+
+    public static void solveAux(ArrayList<Integer> list, String op, int index, int sum) {
+
+        if (sum == 0)
+        {
+            System.out.println(op);
+            return;
+        }
+
+        if (index > list.size()-1) {
+            return;
+        }
+
+        solveAux(list, op + list.get(index), index+1, sum-list.get(index));
+        solveAux(list, op, index+1, sum);
     }
 }
