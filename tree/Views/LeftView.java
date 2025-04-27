@@ -1,4 +1,4 @@
-package tree.Traversals.Views;
+package tree.Views;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
